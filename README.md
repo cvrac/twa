@@ -1,4 +1,4 @@
-Tiny Warehouse app \\
-Implementation for the Operating Systems (K22) Course \\
-Department of Informatics and Telecommunications \\
-University of Athens \\
+Tiny Warehouse app<br>
+Implementation for the Operating Systems (K22) Course<br>
+Department of Informatics and Telecommunications<br>
+University of Athens<br>
