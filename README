@@ -1,0 +1,49 @@
+Project 1 2015 - Operating Systems(Κ22)
+Christos Vrachas
+1115201300024
+
+Included:
+4 .c source files - main.c, tiny_warehouse.c, hash_table.c, dl_list.c
+4 .h header files - record.h, tiny_warehouse.h, hash_table.h, dl_list.h
+1 makefile
+1 data file - recs150_32.bin
+2 operation files for the data set above
+
+Structure:
+				 _________________
+				|	hash	  |
+		|-------------->|	table     |-----|
+	 _______|_______	|_________________|	|
+	|     tiny	|				|
+	|   warehouse	|				|
+	|_______________|				|
+		|		 __________________	|
+		|		|	doubly	   |	|
+		|-------------->|    linked list   |<---|
+				|__________________|
+
+Tiny Warehouse
+Includes the list and the hash table, as well as the file names.
+
+Hash Table
+Array of pointers to buckets.
+Each bucket, consists of:
+-sRec array, which is an array of subsets of records, containing the id of a record, and a pointer to the record with
+ this id
+-pointer to overflow bucket, if it is needed
+
+Doubly Linked List
+Consists of nodes, on which the information for every record is stored
+
+Possible execution:
+./twa -l recs150_32.bin -b 2 -f 0.75 -p ops_recs150_20
+
+Possible queries:
+t 10 - prints top 10 customers
+b 10 - prints bottom 10 customers
+q id - prints record with this id
+i record - inserts/updates a record(check the record.h for the record structure)
+p id - prints the percentile of this customer
+a - prints the average amount of all the customers
+e - exit
+
